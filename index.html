@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vellora — everyday essentials, simplified.">
+  <meta name="theme-color" content="#f5f1ea">
+  <title>Vellora — Everyday essentials, simplified.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Thoughtful essentials for everyday living</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Vellora home">VELLORA<span>®</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#about">Our story</a><a href="#faq">FAQ</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LESS CLUTTER. MORE CLARITY.</p>
+        <h1>Make room for<br><em>everyday ease.</em></h1>
+        <p class="hero-text">Simple, useful essentials designed to bring a little more order to your day.</p>
+        <a class="button dark" href="#shop">Explore the collection</a>
+      </div>
+      <div class="hero-art" aria-label="Abstract neutral still life">
+        <div class="sun"></div><div class="arch"></div><div class="plinth"></div>
+        <span class="art-caption">THE EVERYDAY EDIT — 01</span>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <span>FUNCTION, WITH FEELING.</span><span>CONSIDERED DESIGN.</span><span>EVERYDAY SIMPLICITY.</span>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE VELLORA COLLECTION</p><h2>Small things.<br><em>Better days.</em></h2></div>
+        <p>Useful pieces for calmer spaces and smoother routines.</p>
+      </div>
+      <div class="product-grid" id="products">
+        <article class="product-card">
+          <div class="product-art art-clips"><span class="product-tag">01 / DESK</span><div class="clip-shape"></div></div>
+          <div class="product-info"><div><h3>Cable Clips</h3><p>Keep everyday cables in place.</p></div><strong>₹299</strong></div>
+          <button class="button outline add-button" data-id="clips">Add to bag</button>
+        </article>
+        <article class="product-card">
+          <div class="product-art art-stand"><span class="product-tag">02 / WORK</span><div class="stand-shape"></div></div>
+          <div class="product-info"><div><h3>Phone Stand</h3><p>A simple spot for your screen.</p></div><strong>₹499</strong></div>
+          <button class="button outline add-button" data-id="stand">Add to bag</button>
+        </article>
+        <article class="product-card">
+          <div class="product-art art-organizer"><span class="product-tag">03 / HOME</span><div class="organizer-shape"></div></div>
+          <div class="product-info"><div><h3>Desk Organizer</h3><p>Give small essentials a home.</p></div><strong>₹699</strong></div>
+          <button class="button outline add-button" data-id="organizer">Add to bag</button>
+        </article>
+      </div>
+      <p class="demo-note">Sample products and prices — replace these with real items and confirmed prices before publishing.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-mark">V.</div>
+      <div><p class="eyebrow">A LITTLE LESS, A LITTLE BETTER</p><h2>Everyday essentials.<br><em>Thoughtfully chosen.</em></h2>
+      <p>Vellora is built around the idea that useful things can be simple, considered and easy to live with. We believe a calmer everyday starts with the little details.</p></div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <p class="eyebrow">GOOD TO KNOW</p><h2>Before you order.</h2>
+      <details><summary>How do I place an order?</summary><p>Add items to your bag and continue to checkout. This demo prepares an order message for you to send to the store.</p></details>
+      <details><summary>When will my order arrive?</summary><p>Delivery times will be confirmed by the store after your order is reviewed. Add your actual shipping policy before launch.</p></details>
+      <details><summary>Can I return an item?</summary><p>Please add your real return and refund policy here before accepting orders.</p></details>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">VELLORA<span>®</span></a><p>Everyday essentials. Simplified.</p><small>© <span id="year"></span> Vellora. All rights reserved.</small></footer>
+
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag</h2></div><button id="close-cart" class="close-button" aria-label="Close bag">×</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">Your bag is currently empty.</p></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+      <p class="checkout-note">Shipping and final payment details are confirmed by the store.</p>
+      <button class="button dark full" id="checkout">Continue to order</button>
+      <p class="checkout-hint">This demo uses a manual order message. It does not collect payment.</p>
+    </div>
+  </aside>
+
+  <dialog id="order-dialog">
+    <form method="dialog" class="dialog-inner">
+      <button class="close-button dialog-close" aria-label="Close">×</button>
+      <p class="eyebrow">ALMOST THERE</p><h2>Send your order request.</h2>
+      <label>Your name<input id="customer-name" autocomplete="name" placeholder="Name" required></label>
+      <label>City / delivery area<input id="customer-city" placeholder="City and area" required></label>
+      <label>Contact number or email<input id="customer-contact" placeholder="How can the store contact you?" required></label>
+      <p class="checkout-note">Your order summary will open in your messaging app. The store must confirm availability, delivery charges and payment arrangements.</p>
+      <button class="button dark full" id="send-order" type="button">Prepare order message</button>
+      <p class="checkout-hint">Before launch, replace the demo contact details in script.js with a guardian-managed store contact.</p>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
